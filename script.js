@@ -14,6 +14,8 @@ document.querySelector(".check").addEventListener("click", () => {
   let guessedNumber = document.querySelector(".guess").value;
   if (!guessedNumber) {
     dispalyMessage("⛔ No number entered");
+  } else if (guessedNumber < 1 || guessedNumber > 20) {
+    dispalyMessage("Out of range!!! 😲");
   } else if (guessedNumber != rightSecretNumber) {
     if (score.textContent > 1) {
       dispalyMessage(
